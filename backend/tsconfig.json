@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "commonjs",
+      "allowJs": true,
+      "outDir": "dist/",
+      "rootDir": "src/",
+      "strict": true,
+      "strictPropertyInitialization": false,
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitAny": true,
+      "skipLibCheck": true,    
+      "paths": {
+        "@config/*": ["./src/config/*"],
+        "@modules/*": ["./src/modules/*"],
+        "@shared/*": ["./src/shared/*"],
+        "@common-types/*": ["./src/@types/*"]
+      }
+    },
+    "include": ["src", "__tests__"]
+  }

@@ -1,0 +1,51 @@
+{
+  "name": "calculadora-de-investimentos-backend",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/Thrashattack/calculadora-de-investimentos",
+  "author": "Carlos Cunha",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn build && node ./dist/server.js",
+    "dev:server": "ts-node-dev --inspect --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/server.ts",
+    "build": "tsc --project ./tsconfig.json && tscpaths -p ./tsconfig.json -s ./src -o ./dist",
+    "start:server": "node dist/server.js",
+    "lint": "eslint src --ext ts",
+    "pretty": "prettier --write \"./src/**/*.{js,jsx,json,ts,tsx}\"",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.18.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^6.9.2",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "prettier": "^2.2.1",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.5.0",
+    "tscpaths": "^0.0.9",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.11",
+    "@types/express-validator": "^3.0.0",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/node": "^14.14.22",
+    "@types/pg": "^7.14.9",
+    "@types/sequelize": "^4.28.9",
+    "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "ts-node": "^9.1.1",
+    "tsc": "^1.20150623.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.3"
+  }
+}
