@@ -1,0 +1,3 @@
+apps:
+  - script   : dist/server.js
+    name     : investiment_calculator_server
